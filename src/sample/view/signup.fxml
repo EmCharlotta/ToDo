@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SignUpController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #004c3f;">
@@ -23,7 +22,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="signUpFirstName" layoutX="100.0" layoutY="58.0" prefHeight="25.0" prefWidth="486.0" promptText="FirstName" />
-                  <TextField fx:id="singupSurname" layoutX="100.0" layoutY="97.0" prefHeight="25.0" prefWidth="486.0" promptText="Surname" />
+                  <TextField fx:id="signupSurname" layoutX="100.0" layoutY="97.0" prefHeight="25.0" prefWidth="486.0" promptText="Surname" />
                   <CheckBox fx:id="signupCheckboxMale" layoutX="284.0" layoutY="208.0" mnemonicParsing="false" selected="true" text="Male" />
                   <CheckBox fx:id="signupCheckboxFemale" layoutX="392.0" layoutY="208.0" mnemonicParsing="false" text="Female" />
                   <Button fx:id="loginSignupButton" layoutX="294.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" text="Sign up" />

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>sample</groupId>
+<artifactId>todolist</artifactId>
+<version>1.0-SNAPSHOT</version>
+
+<properties>
+    <maven.compiler.source>13</maven.compiler.source>
+    <maven.compiler.target>13</maven.compiler.target>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.12</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <!--пул соединений-->
+    <dependency>
+        <groupId>com.mchange</groupId>
+        <!-- эта библиотека позволяет создавать пул соединений,
+            мы сможем брать оттуда вместо DriverManager.getConnection -->
+        <artifactId>c3p0</artifactId>
+        <version>0.9.5.5</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
+    <dependency>
+    <!-- Подключаем интерфейсы (JPA) -->
+    <groupId>javax.persistence</groupId>
+    <artifactId>javax.persistence-api</artifactId>
+    <version>2.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+    <dependency>
+        <!-- Подключаем реализации для интерфейсов (ORM)
+         Настройки ORM, реализующего JPA собираем в отдельном файле persistence.xml-->
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>eclipselink</artifactId>
+        <version>2.7.7</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+        <version>2.7.7</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <!-- Библиотека-генератор кода, мы создаем класс, аннотацией говорим, что должен быть конструктор,
+        getter/setter
+         библиотека его сама создает (Это вместо alt+Insert+Constructor;)-->
+        <artifactId>lombok</artifactId>
+        <version>1.18.12</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+</project>

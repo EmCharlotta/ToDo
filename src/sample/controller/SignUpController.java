@@ -5,8 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import sample.database.DatabaseHandler;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SignUpController {
@@ -27,7 +29,7 @@ public class SignUpController {
     private TextField signUpFirstName;
 
     @FXML
-    private TextField singupSurname;
+    private TextField signupSurname;
 
     @FXML
     private CheckBox signupCheckboxMale;
@@ -40,7 +42,15 @@ public class SignUpController {
 
     @FXML
     void initialize() {
-
+        DatabaseHandler dbHandler = new DatabaseHandler();
+    loginSignupButton.setOnAction(event -> {
+        try {
+            dbHandler.signUpUser(signUpFirstName.getText(), signupSurname.getText(), signupLogin.getText(),
+                    signupPassword.getText(),"female");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    });
     }
 }
 
