@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <!-- тег persistence-unit (сами придумываем название) объединяет все настройки-->
+    <persistence-unit name="toDoList" transaction-type="RESOURCE_LOCAL">
+        <!--Когда создадим сущнос ть (класс, который мы потом преобразуем в таблицу в БД), то её нужно зарегистрировать
+            в этом persistence файле-->
+        <class>sample.entity.Task</class>
+        <class>sample.entity.User</class>
+        <properties>
+            <!--            УСТАНОВИТЬ СВОИ НАСТРОЙКИ:
+                                    IP, ПОРТ (если меняли) - строка 16
+                                    НАЗВАНИЕ БАЗЫ ДАННЫХ - строка 16
+                                    ИМЯ ПОЛЬЗОВАТЕЛЯ - строка 18
+                                    ПАРОЛЬ - строка 20
+            -->
+            <!--строка подключения к бд-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/toDoList"/>
+            <!--логин пользователя бд-->
+            <property name="javax.persistence.jdbc.user" value="EmCharlotte"/>
+            <!-- пароль пользователя бд-->
+            <property name="javax.persistence.jdbc.password" value="1990"/>
+            <!--используемый драйвер-->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <!--ORM только создает из данных SQL-запрос, а потом методами драйвера подключается, передает данные,
+            получает обратно и своими силами создает из данных объект
+            То есть ORM создает запрос и также преобразует данные в объект, это всё-->
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <!--FINE - означает, что логгирует все свои действия, своего логгера у ORM нет, берет тот, что есть-->
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            <!--когда мы запускаем проект, все существующие таблицы удалятся со всеми данными и создадутся новые -->
+            <!--            none - ничего не делать при повторных запусках-->
+            <!--            create-tables - таблицы останутся и создадутся новые при повторном -->
+
+            <!--           ORM работает с пулом соединений, по умолчанию работает со своим
+             настройки для пула соединений-->
+            <property name="eclipselink.connection-pool.default.initial" value="5"/>
+            <property name="eclipselink.connection-pool.default.min" value="3"/>
+            <property name="eclipselink.connection-pool.default.max" value="10"/>
+
+            <!--            отключение кэша-->
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <!--загрузка sql скрипта-->
+            <!--(Если у нас есть какой-то SQL скрипт и нам нужно его выполнить - собираем его в path_to_sql.sql)-->
+            <!--            <property name="javax.persistence.sql-load-script-source" -->
+            <!--                      value="META-INF/path_to_sql.sql" />-->
+        </properties>
+    </persistence-unit>
+</persistence>

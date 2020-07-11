@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SignUpController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #004c3f;">
+         <children>
+            <AnchorPane layoutY="101.0" prefHeight="299.0" prefWidth="700.0" style="-fx-background-color: E3E3E3;">
+               <children>
+                  <TextField fx:id="signupLogin" layoutX="100.0" layoutY="137.0" prefHeight="25.0" prefWidth="486.0" promptText="Login" />
+                  <PasswordField fx:id="signupPassword" layoutX="100.0" layoutY="173.0" prefHeight="25.0" prefWidth="486.0" promptText="Password" />
+                  <Label layoutX="328.0" layoutY="22.0" text="Sign Up">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signUpFirstName" layoutX="100.0" layoutY="58.0" prefHeight="25.0" prefWidth="486.0" promptText="FirstName" />
+                  <TextField fx:id="signupSurname" layoutX="100.0" layoutY="97.0" prefHeight="25.0" prefWidth="486.0" promptText="Surname" />
+                  <CheckBox fx:id="signupCheckboxMale" layoutX="284.0" layoutY="208.0" mnemonicParsing="false" selected="true" text="Male" />
+                  <CheckBox fx:id="signupCheckboxFemale" layoutX="392.0" layoutY="208.0" mnemonicParsing="false" text="Female" />
+                  <Button fx:id="loginSignupButton" layoutX="294.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" text="Sign up" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="284.0" layoutY="40.0" text="TO DO LIST" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
