@@ -1,26 +1,28 @@
-package sample.model;
+package sample.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class User {
     @Setter
     @Getter
+    @NonNull
     private String firstName;
     @Setter
     @Getter
+    @NonNull
     private String surname;
     @Setter
     @Getter
+    @NonNull
     private String login;
     @Setter
     @Getter
+    @NonNull
     private String password;
     @Setter
     @Getter
+    @NonNull
     private String gender;
 }

@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.controller.LoginController;
+import sample.database.DatabaseHandler;
 
 
 public class Main extends Application {
@@ -13,9 +14,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/login.fxml"));
-        primaryStage.setTitle("Hello World");
+        // Parent root = FXMLLoader.load(getClass().getResource("/sample/view/additem.fxml"));
+        primaryStage.setTitle("ToDo List");
         primaryStage.setScene(new Scene(root, 700, 400));
         primaryStage.show();
+
     }
 
 

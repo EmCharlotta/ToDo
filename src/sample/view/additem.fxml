@@ -6,21 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddItemController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #004c3f;">
          <children>
-            <AnchorPane layoutY="101.0" prefHeight="299.0" prefWidth="700.0" style="-fx-background-color: E3E3E3;">
+            <AnchorPane fx:id="anchorPane" layoutY="101.0" prefHeight="299.0" prefWidth="700.0" style="-fx-background-color: E3E3E3;">
                <children>
-                  <Label layoutX="242.0" layoutY="161.0" text="All tasks completed =^..^=">
+                  <Label fx:id="tasksCompletedLabel" layoutX="242.0" layoutY="161.0" text="All tasks completed =^..^=">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="addButton" fitHeight="38.0" fitWidth="46.0" layoutX="331.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="addButton" fitHeight="38.0" fitWidth="46.0" layoutX="331.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Downloads/add_icon.png" />
+                        <Image url="@../assets/add_icon.png" />
                      </image>
                   </ImageView>
                </children>

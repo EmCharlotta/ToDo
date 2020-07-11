@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddItemFormController">
+   <children>
+      <TextField fx:id="taskName" layoutX="130.0" layoutY="85.0" prefHeight="47.0" prefWidth="443.0" promptText="Task">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="taskDescription" layoutX="130.0" layoutY="177.0" prefHeight="47.0" prefWidth="443.0" promptText="Description">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addTaskButton" layoutX="130.0" layoutY="257.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="109.0" text="Save Task" />
+      <Label fx:id="taskAddedLabel" layoutX="338.0" layoutY="54.0" text="Task added succesfully" visible="false" />
+      <Button layoutX="482.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="My Tasks" visible="false" />
+      <Button fx:id="myTasks" layoutX="452.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="My tasks" visible="false" />
+   </children>
+</AnchorPane>

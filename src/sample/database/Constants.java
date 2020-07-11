@@ -10,6 +10,7 @@ public class Constants {
     public static final String USERS_PASSWORD = "password";
     public static final String USERS_GENDER = "gender";
     public static final String TASKS_ID = "taskid";
+    public static final String TASK = "task";
     public static final String TASKS_CREATED_ON = "created_on";
     public static final String TASKS_DESCRIPTION = "description";
 

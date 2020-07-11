@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import sample.database.DatabaseHandler;
+import sample.entity.User;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -42,15 +43,30 @@ public class SignUpController {
 
     @FXML
     void initialize() {
-        DatabaseHandler dbHandler = new DatabaseHandler();
+
     loginSignupButton.setOnAction(event -> {
+        createUser();
+    });
+    }
+
+    private void createUser(){
+        DatabaseHandler dbHandler = new DatabaseHandler();
+        String name = signUpFirstName.getText();
+        String surname = signupSurname.getText();
+        String login = signupLogin.getText();
+        String password = signupPassword.getText();
+        String gender;
+        if(signupCheckboxMale.isSelected()){
+            gender = "Male";
+        }
+        else gender = "Female";
+        User user = new User(name, surname, login, password, gender);
+
         try {
-            dbHandler.signUpUser(signUpFirstName.getText(), signupSurname.getText(), signupLogin.getText(),
-                    signupPassword.getText(),"female");
+            dbHandler.signUpUser(user);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    });
     }
 }
 
