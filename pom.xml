@@ -31,7 +31,7 @@
         <!-- эта библиотека позволяет создавать пул соединений,
             мы сможем брать оттуда вместо DriverManager.getConnection -->
         <artifactId>c3p0</artifactId>
-        <version>0.9.5.5</version>
+        <version>0.12.0</version>
     </dependency>
 
 
